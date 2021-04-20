@@ -27,8 +27,14 @@
   }
 
   > summary {
+    list-style: none;
     transition: background-color $TRANSITION_SPEED;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 3px;
+    padding-left: 4px;
 
+    &::marker,
     &::-webkit-details-marker {
       display: none;
     }
