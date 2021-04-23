@@ -69,27 +69,6 @@
       color: $WEB_PRIMARY_COLOR;
       text-decoration: none;
     }
-
-    &::after {
-      display: inline-block;
-      height: 0.5em;
-      margin-left: 0.6em;
-    }
-
-
-    &[data-badge='new']::after {
-      color: $WEB_PRIMARY_COLOR;
-      content: 'NEW';
-      font-size: 12px;
-      @include apply-utility('weight', 'medium');
-    }
-
-    &[data-badge='updated']::after {
-      background: $WEB_PRIMARY_COLOR;
-      border-radius: 50%;
-      content: '';
-      width: 0.5em;
-    }
   }
 
   &__link-counter {
@@ -103,6 +82,19 @@
   &__link-title {
     font-size: px-to-rem(14px);
     line-height: 1.5;
+
+    &::after {
+      display: inline-block;
+      height: 0.5em;
+      margin-left: 0.6em;
+    }
+
+    &[data-badge='new']::after {
+      color: $WEB_PRIMARY_COLOR;
+      content: 'NEW';
+      font-size: 12px;
+      @include apply-utility('weight', 'medium');
+    }
   }
 
   &__link-check {
